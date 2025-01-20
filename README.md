@@ -31,8 +31,10 @@ Finally, to run the image use [run.sh](./run.sh):
 Where each argument is replaced with the right value. These values can be obtained from the original launch command, but the token will eventually expire. You can find online [ways to refresh the token](https://kqzz.github.io/mc-bearer-token/).
 
 ## Troubleshooting
- - If when running the image there are isues with `iblwjgl.so`, such as "wrong ELF class: ELFCLASS32 (Possible cause: architecture word width mismatch)", replacing `iblwjgl.so` with `iblwjgl64.so` from the same folder might do the trick.
- - You need to make sure you can run GUI apps within docker. There are tons of guides online on how to get this working, a simple ubuntu image running gedit is a good start. If it doesn't work, `mc-docker` will not work.
+ - You need to make sure you can run GUI apps within docker. There are tons of guides online on how to get this working, a simple ubuntu image running gedit is a good start. If it doesn't work, `mc-docker` will not work
+ - If when running the image there are isues with `iblwjgl.so`, such as "wrong ELF class: ELFCLASS32 (Possible cause: architecture word width mismatch)", replacing `iblwjgl.so` with `iblwjgl64.so` from the same folder might do the trick
+ - To avoid using hardware acceleration add the `-Dorg.lwjgl.opengl.Display.allowSoftwareOpenGL=true` argument to the `CMD`
+ 
 
 ## Limitations
 It is quite obvious from the usage guide that a (preferably ubuntu linux) host machine with a working instalation of Minecraft is needed, so that the configuration can be copied over to the image. 
