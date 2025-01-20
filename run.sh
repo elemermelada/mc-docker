@@ -1,0 +1,1 @@
+docker run -e DISPLAY=$DISPLAY -e USERNAME=$1 -e UUID=$2 -e TOKEN=$3 -v /tmp/.X11-unix:/tmp/.X11-unix --privileged mc-docker
