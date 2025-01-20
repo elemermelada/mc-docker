@@ -25,6 +25,7 @@ chmod +x build.sh
 Finally, to run the image use [run.sh](./run.sh):
 
 ```bash
+chmod +x run.sh
 ./run.sh <username> <uuid> <accesstoken>
 ```
 
